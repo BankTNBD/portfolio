@@ -1,65 +1,102 @@
-import Image from "next/image";
+import GlassBox from "@/components/glass-box"
+import Image from "next/image"
+import Link from "next/link"
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <div className="relative min-h-screen w-full overflow-hidden bg-black text-white">
+
+      {/* Background grid */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-size-[40px_40px]" />
+
+      {/* Radial glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(124,58,237,0.25),transparent_60%)]" />
+
+      <main className="relative z-10 flex min-h-screen flex-col items-center justify-center px-6 text-center">
+
+        <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
+          <span className="bg-linear-to-r from-violet-500 to-fuchsia-500 bg-clip-text text-transparent uppercase">
+            Portfolio
+          </span>
+        </h1>
+
+        <h2 className="mt-6 max-w-3xl text-2xl md:text-3xl font-semibold text-slate-200">
+          Thanabadee Techakasiwattana
+        </h2>
+
+        <p className="mt-4 max-w-2xl text-slate-400">
+          Study at{" "}
+          <span className="text-white font-medium">
+            Chulalongkorn University
+          </span>{" "}
+          Bachelor of Engineering
+          2025 (First-year Student)
+          <br />
+          Computer Engineering and Digital Technology (CEDT)
+
+        </p>
+
+        <div className="mt-8 flex flex-wrap justify-center gap-3">
+          <Link href="mailto:bankthanabadee2007@gmail.com">
+            <p
+              className="rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm backdrop-blur-md"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              bankthanabadee2007@gmail.com
+            </p>
+          </Link>
+          <Link href="mailto:contact@iambanky.com">
+            <p
+              className="rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm backdrop-blur-md"
             >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+              contact@iambanky.com
+            </p>
+          </Link>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+
+        <section className="w-full flex flex-col items-center">
+          <h2 className="mt-6 text-2xl md:text-3xl font-semibold text-slate-200">
+            Projects
+          </h2>
+          <GlassBox className="rounded-xl mt-6 w-full p-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 place-items-center sm:place-items-stretch">
+            <GlassBox className="p-0 w-full max-w-md">
+              <div className="relative aspect-video bg-amber-50 rounded-t-xl w-full">
+                <Image src="/mini-cpu.svg" alt="Mini CPU" fill className="object-contain rounded-t-xl" />
+              </div>
+              <div className="p-3">
+                <h3 className="text-lg font-bold">Mini CPU Project</h3>
+                <ul className="text-left list-disc list-inside">
+                  <li>
+                    Designed and built a functional 8-bit multi-cycle CPU (ALU, control unit, registers, memory).
+                  </li>
+                  <li>
+                    Implemented a custom 14-bit ISA with arithmetic, branching, memory ops, and LCM/factorial/prime instructions.
+                  </li>
+                  <li>
+                    Added program loader, execution controller, and hardware output (7-seg display).
+                  </li>
+                </ul>
+                <div className="w-full text-right mt-3">
+                  <Link href="https://github.com/BankTNBD/Mini-CPU" className="uppercase underline hover:no-underline">more...</Link>
+                </div>
+              </div>
+            </GlassBox>
+            <GlassBox className="p-0 w-full max-w-md">
+              <div className="relative aspect-video bg-amber-50 rounded-t-xl w-full">
+                <Image src="/idea-cloud.png" alt="IdeaCloud" fill className="object-contain rounded-t-xl" />
+              </div>
+              <div className="p-3">
+                <h3 className="text-lg font-bold">Idea Cloud – AI-Powered Idea Generation Web Application</h3>
+                <p className="text-left">
+                  Developed a single-page web application that helps users generate, explore, and manage project ideas using AI.
+                </p>
+                <div className="w-full text-right mt-3">
+                  <Link href="https://github.com/BankTNBD/idea-cloud" className="uppercase underline hover:no-underline">more...</Link>
+                </div>
+              </div>
+            </GlassBox>
+          </GlassBox>
+        </section>
       </main>
     </div>
-  );
+  )
 }
