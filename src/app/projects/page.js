@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function ProjectsPage() {
     return (
-        <main className="relative z-10 flex min-h-screen flex-col items-center justify-center px-6 text-center mt-20">
+        <main className="relative z-10 flex min-h-screen flex-col items-center justify-center px-6 text-center">
             <section className="w-full flex flex-col items-center">
                 <h2 className="mt-6 text-2xl md:text-3xl font-semibold text-slate-200">
                     Projects
@@ -29,7 +29,7 @@ export default function ProjectsPage() {
                                     </li>
                                 </ul>
                                 <div className="w-full text-right mt-3">
-                                    <Link href="https://github.com/BankTNBD/Mini-CPU" className="uppercase underline hover:no-underline">more...</Link>
+                                    <Link href="https://github.com/BankTNBD/Mini-CPU" target="_blank" rel="noopener noreferrer" className="uppercase underline hover:no-underline">more...</Link>
                                 </div>
                             </div>
                         </GlassBox>
@@ -44,7 +44,7 @@ export default function ProjectsPage() {
                                     Developed a single-page web application that helps users generate, explore, and manage project ideas using AI.
                                 </p>
                                 <div className="w-full text-right mt-3">
-                                    <Link href="https://github.com/BankTNBD/idea-cloud" className="uppercase underline hover:no-underline">more...</Link>
+                                    <Link href="https://github.com/BankTNBD/idea-cloud" target="_blank" rel="noopener noreferrer" className="uppercase underline hover:no-underline">more...</Link>
                                 </div>
                             </div>
                         </GlassBox>
@@ -59,7 +59,7 @@ export default function ProjectsPage() {
                                     Developed a configurable reverse proxy supporting HTTP/HTTPS/TCP in Node.js, hostname-based routing, and SSL integration. Implemented JSON-driven forwarding rules for dynamic request handling and streamlined multi-service routing.
                                 </p>
                                 <div className="w-full text-right mt-3">
-                                    <Link href="https://github.com/BankTNBD/reverse-proxy" className="uppercase underline hover:no-underline">more...</Link>
+                                    <Link href="https://github.com/BankTNBD/reverse-proxy" target="_blank" rel="noopener noreferrer" className="uppercase underline hover:no-underline">more...</Link>
                                 </div>
                             </div>
                         </GlassBox>
@@ -74,7 +74,7 @@ export default function ProjectsPage() {
                                     Developed an experimental school website to practice and enhance web development skills. The project includes school information pages, staff profiles, and news and activities sections. Built with Next.js and React for the frontend, Supabase for the database, and Tailwind CSS for styling. All content is mock data created for learning purposes only.
                                 </p>
                                 <div className="w-full text-right mt-3">
-                                    <Link href="https://github.com/BankTNBD/kpsp" className="uppercase underline hover:no-underline">more...</Link>
+                                    <Link href="https://github.com/BankTNBD/kpsp" target="_blank" rel="noopener noreferrer" className="uppercase underline hover:no-underline">more...</Link>
                                 </div>
                             </div>
                         </GlassBox>
@@ -89,7 +89,7 @@ export default function ProjectsPage() {
                                     Developed a multiplayer 20 Questions web game allowing users to create rooms, invite friends, and play with configurable categories and question limits.
                                 </p>
                                 <div className="w-full text-right mt-3">
-                                    <Link href="https://guessy.iambanky.com/" className="uppercase underline hover:no-underline">more...</Link>
+                                    <Link href="https://guessy.iambanky.com/" target="_blank" rel="noopener noreferrer" className="uppercase underline hover:no-underline">more...</Link>
                                 </div>
                             </div>
                         </GlassBox>
@@ -104,7 +104,7 @@ export default function ProjectsPage() {
                                     Designed and built a personal portfolio website for university admission to Chulalongkorn University, focusing on clear presentation of academic and project achievements.
                                 </p>
                                 <div className="w-full text-right mt-3">
-                                    <Link href="https://chula-portfolio.iambanky.com" className="uppercase underline hover:no-underline">more...</Link>
+                                    <Link href="https://chula-portfolio.iambanky.com" target="_blank" rel="noopener noreferrer" className="uppercase underline hover:no-underline">more...</Link>
                                 </div>
                             </div>
                         </GlassBox>
