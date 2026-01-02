@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
               speed={0.5}
             />
           </div>
-          
+
           {/* Navbar */}
           <header className="fixed top-4 left-0 right-0 z-50 flex justify-center px-4">
             <nav>
@@ -40,6 +40,9 @@ export default function RootLayout({ children }) {
                 </Link>
                 <Link href="/projects">
                   <span className="opacity-70 hover:opacity-100 cursor-pointer text-amber-50">Projects</span>
+                </Link>
+                <Link href="/about-me">
+                  <span className="opacity-70 hover:opacity-100 cursor-pointer text-amber-50">About Me</span>
                 </Link>
               </GlassBox>
             </nav>
